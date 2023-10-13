@@ -1,0 +1,6 @@
+div.ant-space-item ul.ant-menu.ant-menu-root li.ant-menu-item {
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    height: 38px;
+}
