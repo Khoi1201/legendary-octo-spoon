@@ -13,7 +13,6 @@ const Sidebar = ({ menu }) => {
   }, [menu]);
 
   const onClick = (e) => {
-    console.log(e.key);
     setCurrent(e.key);
   };
   return (

@@ -20,7 +20,7 @@ const items = [
         <Link to={"about"} />
       </>
     ),
-    key: "detail",
+    key: "about",
     icon: <AppstoreOutlined size={20} weight="bold" />,
   },
 ];

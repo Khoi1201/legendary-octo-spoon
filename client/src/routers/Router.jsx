@@ -18,7 +18,7 @@ const Router = () => {
           <Sidebar menu={menu} />
           <Routes>
             <Route path="payment" element={<Payment setMenu={setMenu} />} />
-            <Route path="about" element={<About />} />
+            <Route path="about" element={<About setMenu={setMenu} />} />
             <Route path="/" element={<Navigate to="/payment" />} />
           </Routes>
         </Layout>

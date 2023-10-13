@@ -32,8 +32,8 @@ const Payment = ({ setMenu }) => {
             amount: (formData.quantity * 10).toString(),
           },
           consumer: {
-            givenNames: "Khoi", // first name
-            surname: "Nguyen", // last name
+            givenNames: formData.givenNames, // first name
+            surname: formData.surname, // last name
           },
           shipping: {
             countryCode: formData.countryCode, // required
@@ -141,10 +141,17 @@ const Payment = ({ setMenu }) => {
                     required: true,
                     message: "This field is required",
                   },
+                  {
+                    len: 2,
+                    message: "Must be 2 characters long",
+                  },
                 ]}
                 initialValue="IT"
               >
-                <Input placeholder="Input your country code"></Input>
+                <Input
+                  maxLength={2}
+                  placeholder="Input your country code"
+                ></Input>
               </Form.Item>
             </Col>
             <Col span={12}>
@@ -199,7 +206,7 @@ const Payment = ({ setMenu }) => {
                 rules={[
                   {
                     required: true,
-                    message: "Must be a number!",
+                    message: "This field is required a number",
                   },
                 ]}
                 initialValue={1}
